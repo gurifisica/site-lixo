@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto Lixo Eletrônico</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f7f0;
+            color: #222;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #167d3e;
+            color: white;
+            padding: 25px;
+        }
+
+        .brasao {
+            width: 120px;
+            height: auto;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #167d3e;
+        }
+
+        button {
+            background-color: #167d3e;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #105a2c;
+        }
+
+        footer {
+            background-color: #167d3e;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <img
+            src="brasao.jpg.jpeg
+            "
+            alt=""
+            class="brasao"
+        >
+
+        <h2 style="color: white;">
+            Escola Agroindustrial Juscelino Kubitschek
+        </h2>
+
+        <p><strong>Turma: Informática 26B1</strong></p>
+
+        <h1>🌎 Projeto Lixo Eletrônico</h1>
+
+        <p>Região Metropolitana de Belém</p>
+
+        <p>Pequenas atitudes transformam o nosso planeta!</p>
+
+    </header>
+
+    <section>
+        <h2>♻️ O que é lixo eletrônico?</h2>
+
+        <p>
+            Lixo eletrônico são aparelhos e componentes eletrônicos
+            que não são mais utilizados, como celulares, computadores,
+            carregadores, pilhas e cabos.
+        </p>
+
+        <p>
+            O descarte incorreto pode contaminar o solo e a água.
+            Por isso, precisamos dar um destino adequado a esses materiais.
+        </p>
+    </section>
+
+    <section>
+        <h2>🌱 Como podemos ajudar?</h2>
+
+        <p>
+            Podemos separar os aparelhos sem uso e encaminhá-los
+            para pontos de coleta especializados em resíduos eletrônicos.
+        </p>
+
+        <button onclick="mostrarMensagem()">
+            Descubra como ajudar!
+        </button>
+
+        <p id="mensagem"></p>
+    </section>
+
+    <section>
+        <h2>🔬 Nossa missão</h2>
+
+        <p>
+            Investigar os impactos do lixo eletrônico na Região
+            Metropolitana de Belém e desenvolver soluções para
+            proteger o meio ambiente.
+        </p>
+    </section>
+
+    <footer>
+        <p>Projeto Lixo Eletrônico</p>
+        <p>🌍 Tecnologia a favor do planeta!</p>
+    </footer>
+
+    <script>
+        function mostrarMensagem() {
+            document.getElementById("mensagem").innerHTML =
+                "Separe seus eletrônicos usados e procure um ponto de coleta adequado! ♻️";
+        }
+    </script>
+<!-- INÍCIO DO QUIZ SOBRE LIXO ELETRÔNICO -->
+<section id="quiz" style="max-width:800px;margin:30px auto;padding:20px;background:#f0f9ff;border-radius:15px;font-family:Arial,sans-serif;color:#183153;">
+
+  <h2 style="text-align:center;color:#087f5b;">♻️ Quiz: Você sabe tudo sobre E-Lixo?</h2>
+
+  <p style="text-align:center;">
+    Responda às 10 perguntas e descubra o quanto você sabe sobre o descarte correto do lixo eletrônico!
+  </p>
+
+  <div id="quiz-conteudo">
+    <h3 id="pergunta"></h3>
+    <div id="alternativas"></div>
+    <p id="feedback" aria-live="polite"></p>
+    <button id="proxima" type="button" style="display:none;padding:12px 20px;background:#087f5b;color:white;border:0;border-radius:8px;cursor:pointer;">
+      Próxima pergunta
+    </button>
+  </div>
+
+  <div id="resultado" style="display:none;text-align:center;">
+    <h3>🎉 Quiz concluído!</h3>
+    <p id="pontuacao"></p>
+    <button id="reiniciar" type="button" style="padding:12px 20px;background:#087f5b;color:white;border:0;border-radius:8px;cursor:pointer;">
+      Jogar novamente
+    </button>
+  </div>
+
+</section>
+
+<script>
+const perguntas = [
+  {
+    pergunta: "1. O que é lixo eletrônico?",
+    alternativas: [
+      "Restos de comida",
+      "Equipamentos eletrônicos descartados",
+      "Folhas de árvores",
+      "Papel usado"
+    ],
+    correta: 1,
+    explicacao: "Lixo eletrônico inclui celulares, computadores, cabos, pilhas e outros equipamentos descartados."
+  },
+  {
+    pergunta: "2. Qual destes objetos é um exemplo de lixo eletrônico?",
+    alternativas: [
+      "Casca de banana",
+      "Folha de caderno",
+      "Celular quebrado",
+      "Galho seco"
+    ],
+    correta: 2,
+    explicacao: "Celulares quebrados são resíduos eletrônicos e precisam de destinação adequada."
+  },
+  {
+    pergunta: "3. Onde devemos descartar um aparelho eletrônico sem uso?",
+    alternativas: [
+      "Em qualquer terreno",
+      "Em um rio",
+      "Na rua",
+      "Em um ponto de coleta apropriado"
+    ],
+    correta: 3,
+    explicacao: "Pontos de coleta recebem resíduos eletrônicos para encaminhamento adequado."
+  },
+  {
+    pergunta: "4. Por que não devemos jogar lixo eletrônico na natureza?",
+    alternativas: [
+      "Porque pode contaminar o solo e a água",
+      "Porque ocupa pouco espaço",
+      "Porque muda de cor",
+      "Porque desaparece imediatamente"
+    ],
+    correta: 0,
+    explicacao: "Alguns componentes podem liberar substâncias prejudiciais ao ambiente."
+  },
+  {
+    pergunta: "5. O que podemos fazer com um aparelho que ainda funciona?",
+    alternativas: [
+      "Jogar no lixo comum",
+      "Quebrá-lo",
+      "Doar ou reutilizar, quando possível",
+      "Enterrá-lo"
+    ],
+    correta: 2,
+    explicacao: "Reutilizar ou doar equipamentos em boas condições prolonga sua vida útil."
+  },
+  {
+    pergunta: "6. Qual atitude ajuda a reduzir o lixo eletrônico?",
+    alternativas: [
+      "Trocar de celular todo mês",
+      "Cuidar dos aparelhos e consertá-los quando possível",
+      "Jogar cabos no rio",
+      "Comprar aparelhos sem necessidade"
+    ],
+    correta: 1,
+    explicacao: "Cuidar, consertar e usar os aparelhos por mais tempo reduz o descarte."
+  },
+  {
+    pergunta: "7. O que significa reciclar um equipamento eletrônico?",
+    alternativas: [
+      "Queimá-lo no quintal",
+      "Jogá-lo na água",
+      "Escondê-lo em casa",
+      "Recuperar materiais para que possam ser aproveitados"
+    ],
+    correta: 3,
+    explicacao: "A reciclagem permite recuperar materiais e reduzir a necessidade de extrair novos recursos."
+  },
+  {
+    pergunta: "8. O que devemos fazer antes de entregar um celular para descarte?",
+    alternativas: [
+      "Apagar os dados pessoais e restaurar o aparelho, quando possível",
+      "Compartilhar todas as senhas",
+      "Deixar as contas abertas",
+      "Publicar os dados pessoais"
+    ],
+    correta: 0,
+    explicacao: "Apagar os dados pessoais ajuda a proteger sua privacidade. Remova também cartões e acessórios pessoais."
+  },
+  {
+    pergunta: "9. As pilhas e baterias usadas devem ser:",
+    alternativas: [
+      "Jogadas em rios",
+      "Queimadas",
+      "Entregues em pontos de coleta apropriados",
+      "Enterradas no jardim"
+    ],
+    correta: 2,
+    explicacao: "Pilhas e baterias devem ser encaminhadas a locais de coleta adequados."
+  },
+  {
+    pergunta: "10. Como os estudantes podem ajudar a combater o problema do lixo eletrônico?",
+    alternativas: [
+      "Ignorando o assunto",
+      "Informando outras pessoas e incentivando o descarte correto",
+      "Jogando aparelhos na rua",
+      "Misturando tudo ao lixo comum"
+    ],
+    correta: 1,
+    explicacao: "A informação e a participação da comunidade ajudam a promover o descarte responsável."
+  }
+];
+
+let indice = 0;
+let acertos = 0;
+let respondida = false;
+
+const perguntaEl = document.getElementById("pergunta");
+const alternativasEl = document.getElementById("alternativas");
+const feedbackEl = document.getElementById("feedback");
+const proximaBtn = document.getElementById("proxima");
+const resultadoEl = document.getElementById("resultado");
+const conteudoEl = document.getElementById("quiz-conteudo");
+
+function mostrarPergunta() {
+  respondida = false;
+  feedbackEl.textContent = "";
+  proximaBtn.style.display = "none";
+  alternativasEl.innerHTML = "";
+
+  const atual = perguntas[indice];
+  perguntaEl.textContent = atual.pergunta;
+
+  atual.alternativas.forEach((alternativa, i) => {
+    const botao = document.createElement("button");
+    botao.type = "button";
+    botao.textContent = alternativa;
+    botao.style.cssText =
+      "display:block;width:100%;margin:8px 0;padding:12px;text-align:left;background:white;color:#183153;border:2px solid #b6d4fe;border-radius:8px;cursor:pointer;font-size:16px;";
+
+    botao.addEventListener("click", () => verificarResposta(i));
+    alternativasEl.appendChild(botao);
+  });
+}
+
+function verificarResposta(escolha) {
+  if (respondida) return;
+  respondida = true;
+
+  const atual = perguntas[indice];
+  const botoes = alternativasEl.querySelectorAll("button");
+
+  botoes.forEach(botao => botao.disabled = true);
+
+  if (escolha === atual.correta) {
+    acertos++;
+    feedbackEl.textContent = "✅ Resposta correta! " + atual.explicacao;
+  } else {
+    feedbackEl.textContent =
+      "❌ Não foi dessa vez. Resposta correta: " +
+      atual.alternativas[atual.correta] + ". " +
+      atual.explicacao;
+  }
+
+  proximaBtn.textContent =
+    indice === perguntas.length - 1 ? "Ver resultado" : "Próxima pergunta";
+  proximaBtn.style.display = "inline-block";
+}
+
+proximaBtn.addEventListener("click", () => {
+  indice++;
+
+  if (indice < perguntas.length) {
+    mostrarPergunta();
+  } else {
+    conteudoEl.style.display = "none";
+    resultadoEl.style.display = "block";
+    document.getElementById("pontuacao").textContent =
+      "Você acertou " + acertos + " de " + perguntas.length +
+      " perguntas! " +
+      (acertos >= 8 ? "Excelente trabalho! 🌟" :
+       acertos >= 5 ? "Muito bem! Continue aprendendo! 🌱" :
+       "Continue estudando e tente novamente! 💚");
+  }
+});
+
+document.getElementById("reiniciar").addEventListener("click", () => {
+  indice = 0;
+  acertos = 0;
+  resultadoEl.style.display = "none";
+  conteudoEl.style.display = "block";
+  mostrarPergunta();
+});
+
+mostrarPergunta();
+</script>
+<!-- FIM DO QUIZ SOBRE LIXO ELETRÔNICO -->
+ <!-- INÍCIO DA SEÇÃO: ONDE DESCARTAR E-LIXO -->
+
+<section id="pontos-descarte">
+    <div class="descarte-container">
+
+        <h2>♻️ Onde descartar o E-Lixo?</h2>
+
+        <p class="descarte-intro">
+            Seu aparelho eletrônico parou de funcionar?
+            Não jogue no lixo comum! Confira algumas opções
+            de descarte em Belém e ajude a proteger o meio ambiente.
+        </p>
+
+        <div class="descarte-aviso">
+            ⚠️ <strong>Atenção:</strong>
+            antes de sair, entre em contato com o local para
+            confirmar se está recebendo seu tipo de material,
+            além do endereço e do horário de funcionamento.
+        </div>
+
+        <div class="descarte-lista">
+
+            <!-- LOCAL 1 -->
+            <article class="descarte-card">
+                <h3>🌱 Horto Municipal de Belém</h3>
+
+                <p>
+                    <strong>Endereço:</strong>
+                    Avenida dos Mundurucus, Batista Campos, Belém – PA.
+                </p>
+
+                <p>
+                    <strong>Recebimento:</strong>
+                    há registro oficial de ponto de coleta de
+                    lixo eletrônico no local. Confirme previamente
+                    quais materiais estão sendo aceitos.
+                </p>
+
+                <a
+                    class="descarte-botao"
+                    href="https://www.google.com/maps/search/?api=1&query=Horto+Municipal+Bel%C3%A9m+Par%C3%A1"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📍 Ver localização no Google Maps
+                </a>
+
+                <p class="descarte-fonte">
+                    Informação de referência:
+                    <a
+                        href="https://meioambiente.belem.pa.gov.br/ponto-de-descarte-de-lixo-eletronico-na-praca-pet-k9-atrai-muitos-moradores-do-reduto-e-umarizal/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Secretaria Municipal de Meio Ambiente
+                    </a>
+                </p>
+            </article>
+
+            <!-- LOCAL 2 -->
+            <article class="descarte-card">
+                <h3>🛍️ Boulevard Shopping Belém</h3>
+
+                <p>
+                    <strong>Endereço:</strong>
+                    Avenida Visconde de Souza Franco, 776,
+                    bairro Reduto, Belém – PA.
+                </p>
+
+                <p>
+                    <strong>Recebimento:</strong>
+                    o shopping divulgou um ponto de coleta de
+                    resíduos eletrônicos no estacionamento G1.
+                    Confirme se o ponto continua ativo.
+                </p>
+
+                <a
+                    class="descarte-botao"
+                    href="https://www.google.com/maps/search/?api=1&query=Boulevard+Shopping+Bel%C3%A9m+Par%C3%A1"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📍 Ver localização no Google Maps
+                </a>
+
+                <p class="descarte-fonte">
+                    Informação de referência:
+                    <a
+                        href="https://boulevardbelem.com.br/fique-por-dentro/descarte-de-residuos-eletronicos.htm"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Site do Boulevard Shopping
+                    </a>
+                </p>
+            </article>
+
+            <!-- LOCAL 3 -->
+            <article class="descarte-card">
+                <h3>♻️ Ecoponto da Sacramenta</h3>
+
+                <p>
+                    <strong>Endereço:</strong>
+                    Avenida Pedro Álvares Cabral, em frente ao
+                    Casota, bairro Sacramenta, Belém – PA.
+                </p>
+
+                <p>
+                    <strong>Recebimento:</strong>
+                    a Prefeitura informa que o espaço recebe
+                    resíduos eletrônicos e materiais recicláveis.
+                    Consulte as regras antes de levar os equipamentos.
+                </p>
+
+                <a
+                    class="descarte-botao"
+                    href="https://www.google.com/maps/search/?api=1&query=Ecoponto+Avenida+Pedro+Alvares+Cabral+Sacramenta+Belem+PA"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📍 Ver localização no Google Maps
+                </a>
+
+                <p class="descarte-fonte">
+                    Informação de referência:
+                    <a
+                        href="https://agencia.belem.pa.gov.br/saiba-como-funciona-o-primeiro-ecoponto-de-belem/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Agência Belém
+                    </a>
+                </p>
+            </article>
+
+            <!-- LOCAL 4 -->
+            <article class="descarte-card">
+                <h3>🔌 Descarte Recicla Pará</h3>
+
+                <p>
+                    <strong>Endereço divulgado:</strong>
+                    Rua Jabatiteua, 389, bairro Marco,
+                    Belém – PA.
+                </p>
+
+                <p>
+                    <strong>Serviço divulgado:</strong>
+                    coleta e destinação de resíduos eletrônicos.
+                    Consulte a empresa para confirmar o atendimento
+                    a pessoas físicas e se é necessário agendar.
+                </p>
+
+                <p>
+                    <strong>Contato divulgado:</strong>
+                    (91) 99327-9100
+                </p>
+
+                <a
+                    class="descarte-botao"
+                    href="https://www.google.com/maps/search/?api=1&query=Rua+Jabatiteua+389+Marco+Bel%C3%A9m+PA"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📍 Ver localização no Google Maps
+                </a>
+            </article>
+
+        </div>
+
+        <div class="descarte-conscientizacao">
+            <h3>🌎 Faça parte da solução!</h3>
+
+            <p>
+                Celulares, computadores, pilhas, baterias e outros
+                equipamentos podem conter materiais prejudiciais
+                ao ambiente quando descartados incorretamente.
+                Procure um ponto adequado e contribua para um
+                futuro mais sustentável!
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    #pontos-descarte {
+        padding: 35px 15px;
+        background: #f0f7f1;
+        font-family: Arial, sans-serif;
+        color: #24352a;
+    }
+
+    #pontos-descarte .descarte-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #pontos-descarte h2 {
+        text-align: center;
+        font-size: 28px;
+        color: #176b3a;
+        margin-bottom: 15px;
+    }
+
+    #pontos-descarte .descarte-intro {
+        text-align: center;
+        line-height: 1.7;
+        margin-bottom: 22px;
+    }
+
+    #pontos-descarte .descarte-aviso {
+        background: #fff4d6;
+        border-left: 5px solid #e0a000;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    #pontos-descarte .descarte-lista {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    #pontos-descarte .descarte-card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid #26834a;
+        overflow-wrap: anywhere;
+    }
+
+    #pontos-descarte .descarte-card h3 {
+        color: #176b3a;
+        margin-top: 0;
+        line-height: 1.4;
+    }
+
+    #pontos-descarte .descarte-card p {
+        line-height: 1.6;
+    }
+
+    #pontos-descarte .descarte-botao {
+        display: block;
+        background: #176b3a;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-top: 15px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    #pontos-descarte .descarte-botao:hover {
+        background: #104d29;
+    }
+
+    #pontos-descarte .descarte-fonte {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    #pontos-descarte .descarte-fonte a {
+        color: #176b3a;
+    }
+
+    #pontos-descarte .descarte-conscientizacao {
+        text-align: center;
+        background: #dcefe0;
+        padding: 20px;
+        margin-top: 25px;
+        border-radius: 12px;
+        line-height: 1.7;
+    }
+
+    #pontos-descarte .descarte-conscientizacao h3 {
+        color: #176b3a;
+    }
+
+    @media (max-width: 650px) {
+        #pontos-descarte .descarte-lista {
+            grid-template-columns: 1fr;
+        }
+
+        #pontos-descarte h2 {
+            font-size: 23px;
+        }
+    }
+</style>
+
+<!-- FIM DA SEÇÃO: ONDE DESCARTAR E-LIXO -->
+</body>
+
+</html>
